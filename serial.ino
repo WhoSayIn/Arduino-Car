@@ -3,13 +3,13 @@
  * 22.12.2013
  */
 
-int motor2Pin1 = 8;    // pin 2 on L293D
-int motor2Pin2 = 9;    // pin 7 on L293D
-int enablePin2 = 5;    // pin 1 on L293D
+int motor1Pin1 = 8;
+int motor1Pin2 = 9;
+int enablePin1 = 5;
 
-int motor1Pin1 = 10;    // pin 2 on L293D
-int motor1Pin2 = 11;    // pin 7 on L293D
-int enablePin1 = 3;    // pin 1 on L293D
+int motor2Pin1 = 10;
+int motor2Pin2 = 11;
+int enablePin2 = 3;
 
 int received = 0;
 
@@ -65,22 +65,22 @@ void loop()
     Serial.println(received);
     
     switch (received) {
-      case 49:
+      case '1':
           solIleri(200);
         break;
-      case 50:
+      case '2':
           sagIleri(200);
         break;
-      case 51:
+      case '3':
           solGeri(200);
         break;
-      case 52:
+      case '4':
           sagGeri(200);
         break;
-      case 53:
+      case '5':
           solDur();
         break;
-      case 54:
+      case '6':
           sagDur();
         break;
       default:
